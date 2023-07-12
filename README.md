@@ -25,6 +25,7 @@
  ・綺麗な風景が見える場所でランニングしたい時
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
+ER図 https://app.diagrams.net/#G11ClUviL8qy9ptwcG90uiaKL21DMg67Kj
 ​後ほど作成予定
 ## 開発環境
 - OS：Linux(CentOS)
