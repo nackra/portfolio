@@ -25,9 +25,9 @@
  ・綺麗な風景が見える場所でランニングしたい時
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
-ER図 https://app.diagrams.net/#G11ClUviL8qy9ptwcG90uiaKL21DMg67Kj
-画面遷移図 https://app.diagrams.net/#G14UZX50z-w7FPSWAK4Lcz4iQ0HRHZA12Y
-​後ほど作成予定
+ ER図 https://app.diagrams.net/#G11ClUviL8qy9ptwcG90uiaKL21DMg67Kj
+ 画面遷移図 https://app.diagrams.net/#G14UZX50z-w7FPSWAK4Lcz4iQ0HRHZA12Y
+​
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
