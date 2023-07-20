@@ -1,0 +1,40 @@
+<div class="container">
+  <br>
+  <% if user_signed_in? %>
+    <% if @user.id == current_user.id %>
+      <h2>マイページ</h2>
+    <% else %>
+      <h2>ユーザー詳細</h2>
+    <% end %>
+  <% else %>
+    <h2>ユーザー詳細</h2>
+  <% end %>
+  <div class="row my-5">
+    <div class="col-3">
+      <h3 class="text-center">プロフィール</h3>
+      <% if user_signed_in? %>
+        <% if @user.id == current_user.id %>
+          <i class="fas fa-user-edit"></i><%= link_to '編集する', edit_user_path, class: "text-dark" %>
+        <% end %><br>
+      <% end %>
+      <div class="profile-img my-2">
+       <% if @user.image.attached? %>
+          <%= image_tag @user.image, size: "100x100", class: "rounded-circle" %>
+      <% else %>
+          <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
+      <% end %>
+      </div>
+      <table class="table profile-table">
+        <tr>
+          <th>ニックネーム</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>自己紹介</th>
+          <td><%= @user.introduction %></td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+</div>

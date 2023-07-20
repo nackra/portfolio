@@ -1,0 +1,28 @@
+<div class="row mb-5">
+  <div class="main-visual">
+    <div class="main-visual-content text-center">
+      <h3 class="my-3">ようこそ！ここは皆さんの「まち」の写真を自慢する場所です</h3>
+      <p>
+        みなさんの住んでいる場所であなたしか知らない場所を
+        <br>誰かに共有してみたいと思ったことはありませんか？
+        <br>また、近所で綺麗な風景が見れる場所に散歩してみたいと思ったことはありませんか?
+        <br><br>このサイトはあなたの近場のおすすめ風景を共有することができるSNSです。
+        <br><u>ぜひ共有していきましょう！</u>
+      </p>
+      <p><small>ユーザー登録なしで投稿を閲覧できますが、新規投稿やコメント、いいねをするには登録が必要です。</small></p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+    <h3 class="text-center mt-3">人気の投稿</h3>
+  
+    <p class="text-center"><strong>投稿一覧は<%= link_to 'こちら', posts_path %></strong></p>
+  </div>
+
+<% if user_signed_in? %>
+  <div class="new-post-btn btn btn-info btn-lg">
+    <i class="fas fa-pen-nib"></i><%= link_to '新規投稿', new_post_path, class: "text-light", 'data-turbolinks': false %>
+  </div>
+<% end %>

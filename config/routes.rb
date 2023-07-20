@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'search' => 'searches#search'
-  root to: 'homes#top'
+  root 'homes#top'
 
   resources :posts do
     resource :favorites, only: [:create, :destroy]
