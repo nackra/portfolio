@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='row'>
+    <div class='mx-auto text-center'>
+
+      <br><br><br><br>
+      <h4>本当に退会しますか？</h4><br>
+
+      <h6>退会すると、会員情報や<br>
+      これまでの投稿履歴が閲覧できなくなります。<br>
+      退会する場合は、「退会する」をクリックしてください。</h6>
+      <br>
+
+      <%= link_to "退会しない", user_path(@user), class: 'btn btn-primary btn-sm' %>
+      <%= link_to "退会する", user_path(@user), class: 'btn btn-danger btn-sm', method: :delete %>
+
+    </div>
+  </div>
+</div>
