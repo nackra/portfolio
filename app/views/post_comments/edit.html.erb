@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="mx-auto">
+      <br>
+      <h3>コメント編集</h3>
+      <%= form_with(model:[@post, @post_comment], local:true) do |f| %>
+        <%= f.text_area :comment, size: "50x5" %><br><br>
+        <%= f.submit "変更内容を保存", class: "btn btn-info mb-3" %>
+      <% end %>
+    </div>
+  </div>
+</div>

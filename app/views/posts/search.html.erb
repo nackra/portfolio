@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="col-xs-12">
+    <br>
+    <h3>'<%= @tag.tag_name %>' のタグが付いた投稿</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>タイトル</th>
+          <th>本文</th>
+        </tr>
+      </thead>
+      <% @posts.each do |post| %>
+      <tbody>
+        <tr>
+          <th>
+            <%= link_to user_path(post.user) do %>
+              <%= attachment_image_tag(post.user, :profile_image, size: "40x40", fallback: "no_image.jpg") %>
+            <% end %>
+          </th>
+          <th>
+            <%= link_to post.title, post_path(post) %>
+          </th>
+          <th>
+            <%= post.body %>
+          </th>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

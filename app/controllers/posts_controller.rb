@@ -6,10 +6,8 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
-    tag_list = params[:post][:tag_name].split(nil)
     @post.score = Language.get_data(post_params[:body])
     if @post.save
-      @post.save_tag(tag_list)
       redirect_to post_path(@post)
     else
       render :new
@@ -41,9 +39,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    tag_list = params[:post][:tag_name].split(nil)
     @post.update(post_params)
-    @post.save_tag(tag_list)
     redirect_to post_path(@post)
   end
 
@@ -56,6 +52,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :title, :body, :tag, spot_attributes: [:address])
+    params.require(:post).permit(:image, :title, :body, spot_attributes: [:address])
   end
 end
