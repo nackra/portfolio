@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
-    @post.score = Language.get_data(post_params[:body])
     if @post.save
       redirect_to post_path(@post)
     else
@@ -20,12 +19,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @lat = @post.spot.latitude
-    @lng = @post.spot.longitude
-    gon.lat = @lat
-    gon.lng = @lng
     @post_comment = PostComment.new
-    @post_tags = @post.tags
+
   end
 
   def edit

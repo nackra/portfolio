@@ -5,16 +5,11 @@
       <h3>投稿内容編集</h3>
       <%= form_with model: @post, local:true do |f| %>
         <h5>画像</h5>
-        <%= f.attachment_field :image %>
+        <%= f.file_field :image %>
         <h5>タイトル</h5>
         <%= f.text_field :title %>
         <h5>本文</h5>
         <%= f.text_area :body, size: "50x5" %>
-        <h5>タグ</h5>
-        <p>
-          半角スペースを入力することで複数のタグを付けることができます。
-          <br>例：羽田空港 グルメ お土産
-        </p>
         <%= f.text_field :tag_name %><br><br>
         <div class="spot">
           <%= f.fields_for :spot do |s| %>

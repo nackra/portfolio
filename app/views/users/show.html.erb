@@ -33,7 +33,10 @@
           <th>自己紹介</th>
           <td><%= @user.introduction %></td>
         </tr>
-        
+        <th>お気に入り</th>
+          <td><%= link_to @user.favorites.count, user_favorites_path(@user), class: "text-dark" %></td>
+        </tr>
+
       </table>
     </div>
   </div>
