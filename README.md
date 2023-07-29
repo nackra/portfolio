@@ -27,6 +27,8 @@
 <!--テーマを設定・提出する時点では不要です-->
  ER図 https://app.diagrams.net/#G11ClUviL8qy9ptwcG90uiaKL21DMg67Kj
  画面遷移図 https://app.diagrams.net/#G14UZX50z-w7FPSWAK4Lcz4iQ0HRHZA12Y
+ テーブル定義書 https://docs.google.com/spreadsheets/d/1I1TqltYXLmEypue8xqQzoHxpT2e8nNAG58Xldj_F3Js/edit#gid=114726313
+ アプリケーション詳細設計書 https://docs.google.com/spreadsheets/d/1iCRa15-vMwh_9MumTKnYLPApTmOg3aPvjOtF4IMPwac/edit#gid=1031934256
 ​
 ## 開発環境
 - OS：Linux(CentOS)
