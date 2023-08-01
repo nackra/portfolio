@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show, :edit, :update, :destroy] do
+    member do
+      get :follows, :followers
+    end
+      resource :relationships, only: [:create, :destroy]
     get 'favorites' => 'users#favorites'
     collection do
       get 'confirm' => 'users#confirm'
