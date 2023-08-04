@@ -21,7 +21,7 @@
         <% if @user.image.attached? %>
           <%= image_tag @user.image, size: "100x100", class: "rounded-circle" %>
         <% else %>
-            <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
+            <%= image_tag asset_path('no_image'), size: "100x100", class: "rounded-circle" %>
         <% end %>
       </div>
       <table class="table profile-table">
