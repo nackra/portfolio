@@ -40,16 +40,6 @@ ActiveRecord::Schema.define(version: 2023_08_01_025513) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", null: false
-    t.string "phone", null: false
-    t.integer "subject", default: 0, null: false
-    t.text "message", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.integer "post_id"
     t.integer "user_id"
@@ -70,11 +60,11 @@ ActiveRecord::Schema.define(version: 2023_08_01_025513) do
     t.string "image_id"
     t.string "title"
     t.string "body"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.text "address"
+    t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "relationships", force: :cascade do |t|
