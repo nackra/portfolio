@@ -1,5 +1,5 @@
 <h2>Follows</h2>
-  <table class='table'>
+<table class='table'>
     <thead>
       <tr>
         <th>Image</th>
@@ -11,28 +11,19 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td>
-            <%= link_to user_path(user) do %>
-              <% if user.image.attached? %>
-               <%= image_tag user.image, size: "100x100", class: "rounded-circle" %>
-              <% else %>
-               <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
+            <td>
+              <%= link_to user_path(user) do %>
+                <% if user.image.attached? %>
+                 <%= image_tag user.image, size: "100x100", class: "rounded-circle" %>
+                <% else %>
+                 <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
+                <% end %>
               <% end %>
-          <% end %>
-            <% end %>
-          </td>
-          <td><%= user.name %></td>
-          <td>
-            <%= link_to follows_user_path(user) do %>
-              <h6>フォロー<%= user.followers.count %></h6>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to followers_user_path(user) do %>
-              <h6>フォロワー<%= user.followeds.count %></h6>
-            <% end %>
-          </td>
+            </td>
+            <td><%= user.name %></td>
+            <td>フォロー:<%= user.followers.count %></td>
+            <td>フォロワー:<%= user.followeds.count %> </td>
         </tr>
       <% end %>
     </tbody>
-  </table>
+</table>

@@ -21,16 +21,8 @@
           <% end %>
         </td>
         <td><%= user.name %></td>
-        <td>
-          <%= link_to follows_user_path(user) do %>
-            <p>フォロー<%= user.followers.count %></p>
-          <% end %>
-        </td>
-        <td>
-          <%= link_to followers_user_path(user) do %>
-            <p>フォロワー<%= user.followeds.count %></p>
-          <% end %>
-        </td>
+        <td>フォロー:<%= user.followers.count %></td>
+        <td>フォロワー:<%= user.followeds.count %></td>
       </tr>
     <% end %>
   </tbody>

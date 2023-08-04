@@ -18,11 +18,11 @@
         <% end %><br>
       <% end %>
       <div class="profile-img my-2">
-       <% if @user.image.attached? %>
+        <% if @user.image.attached? %>
           <%= image_tag @user.image, size: "100x100", class: "rounded-circle" %>
-      <% else %>
-          <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
-      <% end %>
+        <% else %>
+            <%= image_tag 'no_image', size: "100x100", class: "rounded-circle" %>
+        <% end %>
       </div>
       <table class="table profile-table">
         <tr>
